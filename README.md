@@ -60,3 +60,8 @@
 
 ```js
 const WINNER = "girl";
+
+Замените на:
+
+```js
+const WINNER = "boy";
