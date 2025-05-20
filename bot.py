@@ -8,7 +8,7 @@ def start(update: Update, context: CallbackContext):
     user = update.effective_user
     context.bot.send_message(
         chat_id=update.effective_chat.id,
-        text=f"Привет, {user.first_name}! Это бот от твоего мини-приложения 🎉"
+        text=f"Привет, {user.first_name}! Это бот для запуска игры Кошечки-собачки. Для запуска, нажми кнопку Открыть"
     )
 
 updater = Updater(token=TOKEN, use_context=True)
