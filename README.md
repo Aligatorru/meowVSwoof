@@ -5,9 +5,9 @@
 Это милый и забавный клон крестиков-ноликов, изначально созданный как шуточная игра для друзей, чтобы объявить, кого мы ждём — **мальчика или девочку**.
 
 Игра впервые была представлена в двух вариантах:
-
-- [Boy_or_Girl](https://aligatorru.github.io/Boy_or_Girl) — победитель девочка  
-- [Girl_or_Boy](https://aligatorru.github.io/Girl_or_Boy) — победитель мальчик
+   
+   - [Boy_or_Girl](https://github.com/Aligatorru/meowVSwoof/blob/main/Boy_or_Girl.html) — победитель девочка 
+   - [Girl_or_Boy](https://github.com/Aligatorru/meowVSwoof/blob/main/Girl_or_Boy.html) — победитель мальчик
 
 Вы можете посмотреть и сравнить обе версии.  
 А этот репозиторий — переработанная версия в виде "кошечек и собачек".
