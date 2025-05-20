@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Мальчики-девочки</title>
+  <title>Кошечки-собачки</title>
   <style>
     body {
       margin: 0;
@@ -123,29 +123,27 @@
 </head>
 
 <body>
-  <h1>Мальчики-девочки</h1>
+  <h1>Кошечки-собачки</h1>
   <div id="message">Выбери за кого будешь играть</div>
   <div class="character-selection" id="characterSelection">
     <div class="character-option">
-      <button onclick="selectCharacter('boy')">👦</button>
-      <div class="label">мальчик</div>
+      <button onclick="selectCharacter('boy')">🐶</button>
     </div>
     <div class="character-option">
-      <button onclick="selectCharacter('girl')">👧</button>
-      <div class="label">девочка</div>
+      <button onclick="selectCharacter('girl')">🐱</button>
     </div>
   </div>
   <div class="board" id="board" style="display:none;"></div>
   <button id="reset" onclick="resetGame()">Заново</button>
 
   <script>
-    const WINNER = "boy"; // изменить на "boy" или "girl"
+    const WINNER = "girl"; // изменить на "boy" или "girl"
     const excuses = [
       "Ой, мне срочно нужно идти!",
       "Что-то у меня подвисло, давай потом?",
       "Ты уверен(а), что всё правильно? Перезапусти!",
-      "Я так не играю 😠",
-      "Не могу продолжать. Срочно нужно на ГЕНДЕР ПАТИ!"
+      "Я так не играю 🐾",
+      "Не могу продолжать. Срочно нужно бежать..."
     ];
     const thinkingMessages = ["Хмм...", "Думаю...", "Секундочку...", "Сложный выбор..."];
     let player = null;
@@ -172,7 +170,7 @@
         const cellDiv = document.createElement("div");
         cellDiv.className = "cell";
         if (cell) {
-          cellDiv.textContent = cell === "boy" ? "👦" : "👧";
+          cellDiv.textContent = cell === "boy" ? "🐶" : "🐱";
           cellDiv.classList.add("taken");
         }
         cellDiv.onclick = () => handleMove(idx);
@@ -247,7 +245,7 @@
         winCombo.forEach(i => {
           document.querySelectorAll(".cell")[i].classList.add(winner === "boy" ? "winning-boy" : "winning-girl");
         });
-        setMessage(winner === "boy" ? "Это мальчик!" : "Это девочка!");
+        setMessage(winner === "boy" ? "Собачки!" : "Кошечки!");
       } else {
         setMessage("Ничья! Попробуй ещё раз!");
       }
