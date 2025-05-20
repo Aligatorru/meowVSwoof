@@ -6,8 +6,8 @@
 
 Игра впервые была представлена в двух вариантах:
    
-   - [Boy_or_Girl](https://github.com/Aligatorru/meowVSwoof/blob/main/Boy_or_Girl.html) — победитель девочка 
-   - [Girl_or_Boy](https://github.com/Aligatorru/meowVSwoof/blob/main/Girl_or_Boy.html) — победитель мальчик
+   - [Boy_or_Girl](https://aligatorru.github.io/meowVSwoof/Boy_or_Girl) — победитель девочка 
+   - [Girl_or_Boy](https://aligatorru.github.io/meowVSwoof/Girl_or_Boy) — победитель мальчик
 
 Вы можете посмотреть и сравнить обе версии.  
 А этот репозиторий — переработанная версия в виде "кошечек и собачек".
