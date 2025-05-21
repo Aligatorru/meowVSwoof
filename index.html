@@ -137,7 +137,8 @@
   <button id="reset" onclick="resetGame()">Заново</button>
 
   <script>
-    const WINNER = "girl"; // изменить на "boy" или "girl"
+    // const WINNER = "girl"; // изменить на "boy" или "girl"
+    const WINNER = Math.random() < 0.5 ? "boy" : "girl";
     const excuses = [
       "Ой, мне срочно нужно идти!",
       "Что-то у меня подвисло, давай потом?",
