@@ -4,11 +4,24 @@ from telegram import (
 from telegram.ext import (
     Updater, CommandHandler, CallbackQueryHandler, CallbackContext
 )
+from flask import Flask
+from threading import Thread
 import os
 
 # Получаем токен и URL из переменных окружения
 TOKEN = os.getenv("BOT_TOKEN")
 WEBAPP_URL = os.getenv("WEBAPP_URL", "https://aligatorru.github.io/meowVSwoof/")
+
+# Создаём Flask-приложение, чтобы открыть порт (для Render)
+app = Flask(__name__)
+
+@app.route('/')
+def home():
+    return "Бот работает! 🐱🐶"
+
+def run_flask():
+    # Открываем порт, который Render сможет обнаружить
+    app.run(host='0.0.0.0', port=10000)
 
 # Команда /start
 def start(update: Update, context: CallbackContext):
@@ -71,6 +84,9 @@ def button_handler(update: Update, context: CallbackContext):
 
 # Запуск бота
 def main():
+    # Запускаем Flask-сервер в отдельном потоке
+    Thread(target=run_flask).start()
+
     updater = Updater(token=TOKEN, use_context=True)
     dispatcher = updater.dispatcher
 
